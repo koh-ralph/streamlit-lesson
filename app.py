@@ -1,11 +1,15 @@
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 from datetime import datetime
+from pathlib import Path
+
 
 print(f"🟢 Rerun at: {datetime.now()}")
 
-DATA_PATH = "/home/koh_r/projects/streamlit-lesson/data/sgresale.csv"
+BASE_DIR = Path(__file__).resolve().parent
+DATA_PATH = BASE_DIR / "data" / "sgresale.csv"
 
 # df = pd.read_csv(DATA_PATH)
 # Convert the 'month' column to datetime format because it is read as object/string by default
